@@ -1,4 +1,4 @@
-const API_URL = 'https://xhi12qr00b.execute-api.us-east-1.amazonaws.com/prod'; // Replace after first deployment
+const API_URL = 'https://xhi12qr00b.execute-api.us-east-1.amazonaws.com/prod';
 
 let students = [];
 let filteredStudents = [];
