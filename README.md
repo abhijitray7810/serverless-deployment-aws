@@ -89,7 +89,7 @@ Before starting, make sure you have:
 4. Click Create
 
 ---
-![image]()
+![image](https://github.com/abhijitray7810/serverless-deployment-aws/blob/6c99256e40d3dbf4d2b91c4dda5cbd775eff15b0/assets/Screenshot%202026-01-30%20150948.png)
 ### Step 2: Create IAM Role for Lambda
 
 1. Go to IAM → Roles → Create role
@@ -101,7 +101,7 @@ Before starting, make sure you have:
 4. Name: `lambda-student-role`
 
 ---
-![image]()
+![image](https://github.com/abhijitray7810/serverless-deployment-aws/blob/6c99256e40d3dbf4d2b91c4dda5cbd775eff15b0/assets/Screenshot%202026-01-30%20151001.png)
 ### Step 3: Create Lambda Function
 
 1. Go to AWS Lambda → Create function
@@ -150,7 +150,7 @@ def lambda_handler(event, context):
 ```
 
 ---
-![image]()
+![image](https://github.com/abhijitray7810/serverless-deployment-aws/blob/6c99256e40d3dbf4d2b91c4dda5cbd775eff15b0/assets/Screenshot%202026-01-30%20151047.png)
 ### Step 4: Create API Gateway
 
 1. Open API Gateway → Create API
@@ -166,7 +166,7 @@ def lambda_handler(event, context):
 6. Integrate both with Lambda
 
 ---
-![image]()
+![image](https://github.com/abhijitray7810/serverless-deployment-aws/blob/6c99256e40d3dbf4d2b91c4dda5cbd775eff15b0/assets/Screenshot%202026-01-30%20151047.png)
 ### Step 5: Enable CORS
 
 1. Select `/students`
@@ -176,7 +176,7 @@ def lambda_handler(event, context):
 5. Deploy API
 
 ---
-![image]()
+![image](https://github.com/abhijitray7810/serverless-deployment-aws/blob/6c99256e40d3dbf4d2b91c4dda5cbd775eff15b0/assets/Screenshot%202026-01-30%20151106.png)
 ### Step 6: Deploy API
 
 1. Click Actions → Deploy API
@@ -190,7 +190,7 @@ https://xxxx.execute-api.us-east-1.amazonaws.com/prod
 ```
 
 ---
-![image]()
+![image](https://github.com/abhijitray7810/serverless-deployment-aws/blob/6c99256e40d3dbf4d2b91c4dda5cbd775eff15b0/assets/Screenshot%202026-01-30%20151115.png)
 ### Step 7: Create S3 Bucket (Frontend Hosting)
 
 1. Go to S3 → Create bucket
@@ -199,7 +199,7 @@ https://xxxx.execute-api.us-east-1.amazonaws.com/prod
 4. Disable Block Public Access
 
 ---
-![image]()
+![image](https://github.com/abhijitray7810/serverless-deployment-aws/blob/6c99256e40d3dbf4d2b91c4dda5cbd775eff15b0/assets/Screenshot%202026-01-30%20151129.png)
 ### Step 8: Enable Static Website Hosting
 
 1. Open bucket → Properties
@@ -208,7 +208,7 @@ https://xxxx.execute-api.us-east-1.amazonaws.com/prod
 4. Error document: `error.html`
 
 ---
-![image]()
+![image](https://github.com/abhijitray7810/serverless-deployment-aws/blob/6c99256e40d3dbf4d2b91c4dda5cbd775eff15b0/assets/Screenshot%202026-01-30%20151153.png)
 ### Step 9: Upload Frontend Files
 
 Upload:
@@ -220,7 +220,7 @@ Upload:
 To S3 bucket.
 
 ---
-![image]()
+![image](https://github.com/abhijitray7810/serverless-deployment-aws/blob/6c99256e40d3dbf4d2b91c4dda5cbd775eff15b0/assets/Screenshot%202026-01-30%20151206.png)
 ### Step 10: Add Bucket Policy
 
 ```json
@@ -238,7 +238,7 @@ To S3 bucket.
 ```
 
 ---
-![image]()
+![image](https://github.com/abhijitray7810/serverless-deployment-aws/blob/6c99256e40d3dbf4d2b91c4dda5cbd775eff15b0/assets/Screenshot%202026-01-30%20151301.png)
 ### Step 11: Connect Frontend with Backend
 
 Update `script.js`:
@@ -250,7 +250,7 @@ const API_URL = "https://xxxx.execute-api.us-east-1.amazonaws.com/prod/students"
 Replace with your real API URL.
 
 ---
-![image]()
+![image](https://github.com/abhijitray7810/serverless-deployment-aws/blob/6c99256e40d3dbf4d2b91c4dda5cbd775eff15b0/assets/Screenshot%202026-01-30%20151310.png)
 ### Step 12: Test Using CLI
 
 ```bash
@@ -260,7 +260,7 @@ curl -X POST http://student-frontend-abhijit.s3-website-us-east-1.amazonaws.com
 ```
 
 ---
-![image]()
+
 ### Step 13: Test Using Browser
 
 Open:
@@ -272,7 +272,7 @@ http://student-frontend-abhijit.s3-website-us-east-1.amazonaws.com
 Add students using UI.
 
 ---
-![image]()
+
 ## 📸 Screenshots
 
 Add screenshots in `screenshots/` folder.
@@ -280,7 +280,7 @@ Add screenshots in `screenshots/` folder.
 ---
 
 ## ⚠️ Common Issues
-![image]()
+
 ### 1. Data Overwrites
 
 Cause: Same `studentid`
@@ -288,7 +288,7 @@ Cause: Same `studentid`
 Solution: Use UUID in Lambda
 
 ---
-![image]()
+
 ### 2. 403 Access Denied (S3)
 
 Cause: Block Public Access
@@ -339,5 +339,3 @@ This project is licensed under the MIT License.
 DevOps | Cloud | Serverless Enthusiast
 
 ---
-
-⭐ If you like this project, give it a star on GitHub!
