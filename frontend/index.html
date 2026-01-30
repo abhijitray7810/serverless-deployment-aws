@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <div class="header-content">
+                <h1><i class="fas fa-graduation-cap"></i> Student Management</h1>
+                <button class="btn btn-primary" onclick="openModal()">
+                    <i class="fas fa-plus"></i> Add Student
+                </button>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <i class="fas fa-users"></i>
+                    <div>
+                        <h3 id="totalStudents">0</h3>
+                        <p>Total Students</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-chalkboard"></i>
+                    <div>
+                        <h3 id="totalClasses">0</h3>
+                        <p>Classes</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-chart-line"></i>
+                    <div>
+                        <h3 id="avgAge">0</h3>
+                        <p>Average Age</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="toolbar">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="Search by name...">
+                </div>
+                <select id="classFilter" class="filter-select">
+                    <option value="">All Classes</option>
+                </select>
+                <button class="btn btn-secondary" onclick="exportToCSV()">
+                    <i class="fas fa-download"></i> Export CSV
+                </button>
+            </div>
+
+            <div class="table-container">
+                <table id="studentTable" class="data-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Class</th>
+                            <th>Age</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody"></tbody>
+                </table>
+                <div id="emptyState" class="empty-state hidden">
+                    <i class="fas fa-inbox"></i>
+                    <p>No students found</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div id="studentModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Add Student</h2>
+                <button class="close-btn" onclick="closeModal()">&times;</button>
+            </div>
+            <form id="studentForm">
+                <div class="form-group">
+                    <label for="studentid">Student ID *</label>
+                    <input type="text" id="studentid" required pattern="\d+">
+                </div>
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" required minlength="2">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="class">Class *</label>
+                        <input type="text" id="class" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Age *</label>
+                        <input type="number" id="age" required min="16" max="100">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email (Optional)</label>
+                    <input type="email" id="email">
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary" onclick="closeModal()">Cancel</button>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-save"></i> Save Student
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="toastContainer" class="toast-container"></div>
+    <script src="app.js"></script>
+</body>
+</html>
