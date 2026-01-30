@@ -3,7 +3,7 @@
 A complete AWS Serverless Student Management Application using **API Gateway, Lambda, DynamoDB, and S3**. This project demonstrates how to build, deploy, and host a full-stack serverless application on AWS.
 
 ---
-
+![image](https://github.com/abhijitray7810/serverless-deployment-aws/blob/e2cbfa749c92dbfdc8782e2264c7425c1704ea59/assets/Screenshot%202026-01-28%20123911.png)
 ## 📌 Project Description
 
 This project is a serverless web application that allows users to:
@@ -17,7 +17,7 @@ This project is a serverless web application that allows users to:
 The backend is powered by AWS Lambda and DynamoDB, while the frontend is hosted using Amazon S3 static website hosting.
 
 ---
-
+![image](https://github.com/abhijitray7810/serverless-deployment-aws/blob/e2cbfa749c92dbfdc8782e2264c7425c1704ea59/assets/Screenshot%202026-01-30%20150807.png)
 ## 🏗️ Architecture
 
 ```
@@ -31,7 +31,7 @@ DynamoDB (Database)
 ```
 
 ---
-
+![image](https://github.com/abhijitray7810/serverless-deployment-aws/blob/e2cbfa749c92dbfdc8782e2264c7425c1704ea59/assets/Screenshot%202026-01-30%20150821.png)
 ## 🛠️ Technologies Used
 
 * AWS Lambda
@@ -44,7 +44,7 @@ DynamoDB (Database)
 * Git & GitHub
 
 ---
-
+![image](https://github.com/abhijitray7810/serverless-deployment-aws/blob/e2cbfa749c92dbfdc8782e2264c7425c1704ea59/assets/Screenshot%202026-01-30%20150843.png)
 ## 📂 Project Structure
 
 ```
@@ -64,7 +64,7 @@ serverless-deployment-aws/
 ```
 
 ---
-
+![image](https://github.com/abhijitray7810/serverless-deployment-aws/blob/e2cbfa749c92dbfdc8782e2264c7425c1704ea59/assets/Screenshot%202026-01-30%20150853.png)
 ## ✅ Prerequisites
 
 Before starting, make sure you have:
@@ -76,11 +76,11 @@ Before starting, make sure you have:
 * Basic knowledge of AWS
 
 ---
-
+![image](https://github.com/abhijitray7810/serverless-deployment-aws/blob/e2cbfa749c92dbfdc8782e2264c7425c1704ea59/assets/Screenshot%202026-01-30%20150915.png)
 ## ⚙️ Step-by-Step Setup Guide
 
 ---
-
+![image](https://github.com/abhijitray7810/serverless-deployment-aws/blob/e2cbfa749c92dbfdc8782e2264c7425c1704ea59/assets/Screenshot%202026-01-30%20150931.png)
 ### Step 1: Create DynamoDB Table
 
 1. Go to AWS Console → DynamoDB → Tables → Create table
@@ -89,7 +89,7 @@ Before starting, make sure you have:
 4. Click Create
 
 ---
-
+![image]()
 ### Step 2: Create IAM Role for Lambda
 
 1. Go to IAM → Roles → Create role
@@ -101,7 +101,7 @@ Before starting, make sure you have:
 4. Name: `lambda-student-role`
 
 ---
-
+![image]()
 ### Step 3: Create Lambda Function
 
 1. Go to AWS Lambda → Create function
@@ -150,7 +150,7 @@ def lambda_handler(event, context):
 ```
 
 ---
-
+![image]()
 ### Step 4: Create API Gateway
 
 1. Open API Gateway → Create API
@@ -166,7 +166,7 @@ def lambda_handler(event, context):
 6. Integrate both with Lambda
 
 ---
-
+![image]()
 ### Step 5: Enable CORS
 
 1. Select `/students`
@@ -176,7 +176,7 @@ def lambda_handler(event, context):
 5. Deploy API
 
 ---
-
+![image]()
 ### Step 6: Deploy API
 
 1. Click Actions → Deploy API
@@ -190,7 +190,7 @@ https://xxxx.execute-api.us-east-1.amazonaws.com/prod
 ```
 
 ---
-
+![image]()
 ### Step 7: Create S3 Bucket (Frontend Hosting)
 
 1. Go to S3 → Create bucket
@@ -199,7 +199,7 @@ https://xxxx.execute-api.us-east-1.amazonaws.com/prod
 4. Disable Block Public Access
 
 ---
-
+![image]()
 ### Step 8: Enable Static Website Hosting
 
 1. Open bucket → Properties
@@ -208,7 +208,7 @@ https://xxxx.execute-api.us-east-1.amazonaws.com/prod
 4. Error document: `error.html`
 
 ---
-
+![image]()
 ### Step 9: Upload Frontend Files
 
 Upload:
@@ -220,7 +220,7 @@ Upload:
 To S3 bucket.
 
 ---
-
+![image]()
 ### Step 10: Add Bucket Policy
 
 ```json
@@ -238,7 +238,7 @@ To S3 bucket.
 ```
 
 ---
-
+![image]()
 ### Step 11: Connect Frontend with Backend
 
 Update `script.js`:
@@ -250,7 +250,7 @@ const API_URL = "https://xxxx.execute-api.us-east-1.amazonaws.com/prod/students"
 Replace with your real API URL.
 
 ---
-
+![image]()
 ### Step 12: Test Using CLI
 
 ```bash
@@ -260,7 +260,7 @@ curl -X POST http://student-frontend-abhijit.s3-website-us-east-1.amazonaws.com
 ```
 
 ---
-
+![image]()
 ### Step 13: Test Using Browser
 
 Open:
@@ -272,7 +272,7 @@ http://student-frontend-abhijit.s3-website-us-east-1.amazonaws.com
 Add students using UI.
 
 ---
-
+![image]()
 ## 📸 Screenshots
 
 Add screenshots in `screenshots/` folder.
@@ -280,7 +280,7 @@ Add screenshots in `screenshots/` folder.
 ---
 
 ## ⚠️ Common Issues
-
+![image]()
 ### 1. Data Overwrites
 
 Cause: Same `studentid`
@@ -288,7 +288,7 @@ Cause: Same `studentid`
 Solution: Use UUID in Lambda
 
 ---
-
+![image]()
 ### 2. 403 Access Denied (S3)
 
 Cause: Block Public Access
