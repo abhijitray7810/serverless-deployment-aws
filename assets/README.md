@@ -27,7 +27,7 @@ This project demonstrates how to build a **highly available**, **scalable**, **s
 ---
 
 # 🚀 What is Serverless Computing?
-
+A Serverless architecture relies on managed serviced where you only pay for what you use without worrying about infrastructure
 Serverless Computing is a cloud execution model where developers focus only on writing application code while the cloud provider (AWS) automatically manages:
 
 - Infrastructure
