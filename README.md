@@ -1,4 +1,4 @@
-# 🚀 serverless-deployment-aws
+# 🚀 serverless-deployment-aws 
 Serverless computing is a cloud-native development model where a cloud provider automatically manages the underlying server infrastructure, allowing developers to build and run code without provisioning or maintaining physical or virtual servers.
 
 A complete AWS Serverless Student Management Application using **API Gateway, Lambda, DynamoDB, and S3**. This project demonstrates how to build, deploy, and host a full-stack serverless application on AWS.
